@@ -6,7 +6,7 @@ import Button from '../../components/Button'
 import Input from '../../components/Input'
 
 
-const OwnerLoginSignUp = () => {
+const MemberLoginSignUp = () => {
 
   const [pageState, setPageState] = useState('login')
 
@@ -25,18 +25,19 @@ const OwnerLoginSignUp = () => {
         <div className={styles.flex_container}>
           <div className={styles.input_container}>
             {pageState==='signup'?<div>
-             <h3>Create An Owner Account</h3>
+             <h3>Create An Member Account</h3>
               <p>Start managing your own Library</p>
               <form>
-              <label>First Name</label>
               <Input type="text" placeholder="First Name" />
-              <label>Last Name</label>
               <Input type="text" placeholder="Last Name" />
-              <label>Email</label>
               <Input type="email" placeholder="Email" />
-              <label>Password</label>
+              <Input type="number" placeholder={"Enter Adhaar Number"} />
+              <Input 
+                type="file" 
+                placeholder="Upload Adhaar Card" 
+                accept="image/png, image/jpeg"   
+                />
               <Input type="password" placeholder="Password" />
-              <label>Confirm Password</label>
               <Input type="password" placeholder="Confirm Password" />
               <div className={styles.buttons}>
               <Button>Sign Up</Button>
@@ -45,7 +46,7 @@ const OwnerLoginSignUp = () => {
               </form>
              </div>:
              <div>
-              <h3>Owner Login</h3>
+              <h3>Member Login</h3>
               <p>Start managing your own Library</p>
               <form>
               <label>Email</label>
@@ -66,4 +67,4 @@ const OwnerLoginSignUp = () => {
   )
 }
 
-export default OwnerLoginSignUp 
+export default MemberLoginSignUp 

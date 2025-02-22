@@ -6,7 +6,7 @@ import Button from '../../components/Button'
 import Input from '../../components/Input'
 
 
-const OwnerLoginSignUp = () => {
+const LibrarianLoginSignUp = () => {
 
   const [pageState, setPageState] = useState('login')
 
@@ -25,7 +25,7 @@ const OwnerLoginSignUp = () => {
         <div className={styles.flex_container}>
           <div className={styles.input_container}>
             {pageState==='signup'?<div>
-             <h3>Create An Owner Account</h3>
+             <h3>Create An Librarian Account</h3>
               <p>Start managing your own Library</p>
               <form>
               <label>First Name</label>
@@ -45,7 +45,7 @@ const OwnerLoginSignUp = () => {
               </form>
              </div>:
              <div>
-              <h3>Owner Login</h3>
+              <h3>Librarian Login</h3>
               <p>Start managing your own Library</p>
               <form>
               <label>Email</label>
@@ -66,4 +66,4 @@ const OwnerLoginSignUp = () => {
   )
 }
 
-export default OwnerLoginSignUp 
+export default LibrarianLoginSignUp 
